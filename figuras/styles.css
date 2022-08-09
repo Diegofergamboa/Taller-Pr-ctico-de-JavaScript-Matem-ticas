@@ -112,6 +112,7 @@ header article {
 footer {
     width: 100%;
     display: flex;
+    margin-bottom: 8px;
     font-size: 1.2rem;
     justify-content: center;
     letter-spacing: 1rem;
