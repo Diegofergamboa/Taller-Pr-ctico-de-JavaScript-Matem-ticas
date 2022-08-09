@@ -10,20 +10,15 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="header-nav-ul_presentation">
                 <li>Cálculo de figuras geométricas</li>
                 <li><a href="https://platzi.com/cursos/javascript-practico-matematicas/">Taller Práctico de JavaScript: Matemáticas</a></li>
-                <li>
-                    <h2>¿Quien soy?</h2>
-                    <p>Mi nombre es Diego Ortiz Gamboa, soy programador Frontend y estudiante de React.</p>
-                    <p>Platzi Student.</p>
-                </li>
-                <li>
+                <li class="header-nav-li_social">
                     <h2>A continuación te muestro mis redes.</h2>
-                    <ul>
-                        <li><button type="button">Ícono Linkedin</button></li>
-                        <li><button type="button">Ícono Github</button></li>
-                        <li><button type="button">Ícono Stackoverflow</button></li>
+                    <ul class="header-nav-ul_social">
+                        <li class="nav-icon" id="linkedin"><button type="button"><img src="./assets/linkedin.png"/></button></li>
+                        <li class="nav-icon" id="github"><button type="button"><img src="./assets/github.png"></button></li>
+                        <li class="nav-icon" id="stackoverflow"><button type="button"><img src="./assets/stack-overflow (1).png"/></button></li>
                     </ul>
                 </li>
                 <li>
@@ -31,6 +26,14 @@
                 </li>
             </ul>
         </nav>
+        <article>
+            <h2>¿Quien soy?</h2>
+            <p>Mi nombre es Diego Ortiz Gamboa, soy programador Frontend y estudiante de React.</p>
+            <p>Platzi Student.</p>
+        </article>
+    </header>
+        
+    <main>
         <section>
             <!-- Esto activa la sección de cálculo desde JS -->
             <a href="#">Cálculos de cuadrado</a>
@@ -39,8 +42,6 @@
             <a href="#">Cálculos de triángulo isoceles</a>
             <a href="#">Cálculos de triángulo escaleno</a>
         </section>
-    </header>
-    <main>
         <!-- Esto según el tipo de cálculo que se quiera realizar (como arriba) va a sacar el módulo de cálculo -->
         <section>Cálculo</section>
     </main>
