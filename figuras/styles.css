@@ -119,3 +119,54 @@ footer {
     background-color: var(--synth-purple);
     border-radius: 5px;
 }
+
+/* Cuadrado */
+
+.cuadrado {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.image-cuadrado {
+    display: inline-block;
+    width: 35%;
+    background-position: center;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.input-cuadrado {
+    width: 24%;
+    border: 1px solid var(--synth-yellow);
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.button-cuadrado {
+    width: 20%;
+    cursor: pointer;
+    border: 1px solid var(--synth-yellow);
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.div-calcular {
+    width: 100%;
+    display: flex;
+    place-items: center ;
+    place-content: center ;
+}
+.div-calcular-perimetro , .div-calcular-area {
+    margin: 12px;
+    width: 50%;
+    border: 1px solid var(--synth-orange);
+    border-radius: 5px;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+}
