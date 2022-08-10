@@ -10,20 +10,19 @@ function calcularPerimetroCuadrado() {
     const inputValue = document.getElementsByClassName('input-cuadrado')[0].value;
 
     // Se hacen los cálculos del área y el cuadrado.
-    const areaCuadrado = (lado) => {(lado * lado ** 2)};
-    const perimetroCuadrado = (lado) => {(lado * 4)}; // Esto se pone en centimetros cuadrados.
-    console.log(areaCuadrado)
-    console.log(perimetroCuadrado)
+    const areaCuadrado = (lado) => {lado ** 2};
+    const perimetroCuadrado = (lado) => {lado * 4};
+    
     // Se llaman los elementos a modificar y se lanzan los cálculos.
 
     //! Área.
     document.getElementsByClassName('div-calcular-area')[0].innerHTML = `
-        <p>${areaCuadrado}</p>
+        <p>${areaCuadrado((inputValue))} CM^2</p>
     `;
 
     //! Perímetro.
     document.getElementsByClassName('div-calcular-perimetro')[0].innerHTML = `
-        <p>${perimetroCuadrado} CM^2</p>
+        <p>${perimetroCuadrado((inputValue))}</p>
     `;
 };
 
