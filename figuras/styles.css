@@ -122,18 +122,22 @@ footer {
 
 /* Cuadrado */
 
+.card-cuadrado {
+    display: grid;
+}
+
 .cuadrado {
     display: grid;
     place-content: center;
     place-items: center;
     gap: 20px;
     width: 100%;
-    height: auto;
+    height: 270px;
 }
 
 .image-cuadrado {
     display: inline-block;
-    width: 35%;
+    width: 15%;
     background-position: center;
     border-radius: 5px;
     background-repeat: no-repeat;
