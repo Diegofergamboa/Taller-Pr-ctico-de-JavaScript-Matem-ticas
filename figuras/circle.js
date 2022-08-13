@@ -33,6 +33,9 @@ function Circle(){
 };
 
 function setLayoutCircle(){
+    const $buttonCirculo = document.getElementsByClassName('button-circulo')[0];
+    $buttonCirculo.addEventListener('click', Circle);
+
     return(
         document.getElementsByClassName('main-section_calculation')[0].innerHTML = 
         `
@@ -51,12 +54,6 @@ function setLayoutCircle(){
         `
     );
 };
-
-const $buttonCirculo = document.getElementsByClassName('button-circulo')[0];
-$buttonCirculo.addEventListener('click', Circle);
-
-
-
 
 
 
