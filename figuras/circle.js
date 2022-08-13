@@ -51,4 +51,13 @@ function setLayoutCircle(){
         `
     );
 };
+
+const $buttonCirculo = document.getElementsByClassName('button-circulo')[0];
+$buttonCirculo.addEventListener('click', Circle);
+
+
+
+
+
+
 export { Circle, setLayoutCircle } ;
