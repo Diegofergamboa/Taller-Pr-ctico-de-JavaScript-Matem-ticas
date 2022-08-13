@@ -1,3 +1,35 @@
+
+function setLayoutCircle(){
+    return (
+        document.getElementsByClassName('main-section_calculation')[0].innerHTML = 
+        `
+        <div class="card-circulo">
+            <div class="circulo">
+                <h2 class="card-h2">Cálculos del circulo</h2>
+                <img class="image-circulo" src="https://www.problemasyecuaciones.com/geometria2D/area/circulo/img0.png" />
+                <input type="number" class="input-circulo input-base" placeholder="Ingrese el valor del radio"/>
+                <button class="button-circulo" type="button">Calcular</button>
+            <div class="div-calcular">
+                <div class="div-calcular-perimetro">Perímetro</div>
+                <div class="div-calcular-area">Área</div>
+            </div>
+            </div>
+        </div>
+        `
+        
+        );
+};
+
+new Promise(function(resolve) {
+
+    resolve(setLayoutCircle());
+    
+    }).then(function(){
+    const $buttonCirculo = document.getElementsByClassName('button-circulo')[0];
+    $buttonCirculo.addEventListener('click', Circle);
+});
+
+
 function Circle(){
     // 2.  Capturar los valores del "input" (radio).
     const inputRadio = document.getElementsByClassName('input-circulo')[0].value;
@@ -30,29 +62,6 @@ function Circle(){
         <p>El valor del área es ${resultArea} CM^2.</p>
     `;
     
-};
-
-function setLayoutCircle(){
-    const $buttonCirculo = document.getElementsByClassName('button-circulo')[0];
-    $buttonCirculo.addEventListener('click', Circle);
-
-    return(
-        document.getElementsByClassName('main-section_calculation')[0].innerHTML = 
-        `
-        <div class="card-circulo">
-            <div class="circulo">
-                <h2 class="card-h2">Cálculos del circulo</h2>
-                <img class="image-circulo" src="https://www.problemasyecuaciones.com/geometria2D/area/circulo/img0.png" />
-                <input type="number" class="input-circulo input-base" placeholder="Ingrese el valor del radio"/>
-                <button class="button-circulo" type="button">Calcular</button>
-            <div class="div-calcular">
-                <div class="div-calcular-perimetro">Perímetro</div>
-                <div class="div-calcular-area">Área</div>
-            </div>
-            </div>
-        </div>
-        `
-    );
 };
 
 
