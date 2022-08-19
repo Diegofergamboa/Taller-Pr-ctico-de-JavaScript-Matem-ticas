@@ -1,7 +1,7 @@
 // Principal setter
-import { Square , setLayoutSquare } from "./square.js";
-import { Triangle , setLayoutTriangle } from "./triangle.js";
-import { Circle , setLayoutCircle } from "./circle.js";
+import { setLayoutSquare } from "./square.js";
+import { setLayoutTriangle } from "./triangle.js";
+import { setLayoutCircle } from "./circle.js";
 
 
 const $setterCalculator = document.querySelectorAll('.setter-calculator');
