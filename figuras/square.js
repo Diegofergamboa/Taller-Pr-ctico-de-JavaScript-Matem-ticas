@@ -18,16 +18,6 @@ function setLayoutSquare(){
     );
 };
 
-new Promise(function(resolve) {
-
-    resolve(setLayoutSquare());
-    
-    }).then(function(){
-    const $buttonCuadrado = document.getElementsByClassName('button-cuadrado')[0];
-    $buttonCuadrado.addEventListener('click' , Square);
-});
-
-
 function Square() {
     
     // Se captura el valor del input.
