@@ -7,7 +7,7 @@ function setLayoutSquare(){
                 <h2 class="card-h2">Cálculos del cuadrado</h2>
                 <img class="image-cuadrado" src="https://www.abcfichas.com/wp-content/uploads/2020/12/Formula-Area-Cuadrado.jpg" />
                 <input type="number" class="input-cuadrado" placeholder="Ingrese el valor de uno de los lados"/>
-                <button class="button-cuadrado" type="button">Calcular</button>
+                <button class="button-cuadrado" onclick="Square" type="button">Calcular</button>
             </div>
             <div class="div-calcular">
                 <div class="div-calcular-perimetro">Perímetro</div>
@@ -17,6 +17,10 @@ function setLayoutSquare(){
         `
     );
 };
+
+
+// const $buttonCuadrado = document.getElementsByClassName('button-cuadrado')[0];
+// $buttonCuadrado.addEventListener('click', Square()); // ! Colocar el '?'
 
 function Square() {
     
@@ -44,4 +48,4 @@ function Square() {
 };
 
 
-export { Square, setLayoutSquare } ;
+export { setLayoutSquare } ;

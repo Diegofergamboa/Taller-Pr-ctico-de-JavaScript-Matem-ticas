@@ -6,6 +6,8 @@ import { setLayoutCircle } from "./circle.js";
 
 const $setterCalculator = document.querySelectorAll('.setter-calculator');
 
+// ! document.body.on (evento, id o clase, función a ejecutar) (primera solución) (revisar si con window o con document) (revisar listener del click)
+// ! encapsulamiento.
 
 $setterCalculator.forEach(button => {
     return (

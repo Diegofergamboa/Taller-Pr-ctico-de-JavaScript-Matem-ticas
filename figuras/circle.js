@@ -13,16 +13,7 @@ const html = `
 `
 
 function setLayoutCircle(){
-        
-        const impression = () => {
-            return document.getElementsByClassName('main-section_calculation')[0].innerHTML = html;
-        }
-        const buttonListener = new Promise(resolve => {
-            const inputRadio = document.getElementsByClassName('input-circulo')[0].value;
-            const $button = document.getElementsByClassName('button-circulo')[0];
-            inputRadio.length > 1 ? $button.addEventListener('click', Circle()) : null ;
-        )}
-        return (impression());
+        document.getElementsByClassName('main-section_calculation')[0].innerHTML = html;
 };
 
 
