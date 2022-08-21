@@ -1,7 +1,7 @@
 // Principal setter
 import { setLayoutSquare } from "./square.js";
-import { setLayoutTriangle } from "./triangle.js";
-import { setLayoutCircle } from "./circle.js";
+// import { setLayoutTriangle } from "./triangle.js";
+// import { setLayoutCircle } from "./circle.js";
 
 
 const $setterCalculator = document.querySelectorAll('.setter-calculator');
@@ -22,8 +22,7 @@ $setterCalculator.forEach(button => {
 
 
 
-// const $buttonCuadrado = document.getElementsByClassName('button-cuadrado')[0];
-// $buttonCuadrado.addEventListener('click' , Square);
+
 
 // const $buttonTriangulo = document.getElementsByClassName('button-triangulo')[0];
 // $buttonTriangulo.addEventListener('click' , Triangle);
