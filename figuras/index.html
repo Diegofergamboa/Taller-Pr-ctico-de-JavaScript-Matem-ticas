@@ -33,16 +33,56 @@
         </article>
     </header>
     <main>
-        <section class="main-section-a-container">
-            <!-- Esto activa la sección de cálculo desde JS -->
+        <!-- <section class="main-section-a-container">
             <p>Elige que figura deseas calcular.</p>
-            <button class="setter-calculator">Cálculos de cuadrado</button>
-            <button class="setter-calculator">Cálculos de triángulo</button>
-            <button class="setter-calculator">Cálculos de circulo</button>
-        </section>
+            <button class="setter-calculator" type="button">Cálculos de cuadrado</button>
+            <button class="setter-calculator" type="button">Cálculos de triángulo</button>
+            <button class="setter-calculator" type="button">Cálculos de circulo</button>
+        </section> -->
         <!-- Esto según el tipo de cálculo que se quiera realizar (como arriba) va a sacar el módulo de cálculo -->
         <section class="main-section_calculation">
+            <div class="card-cuadrado">
+            <div class="cuadrado">
+                <h2 class="card-h2">Cálculos del cuadrado</h2>
+                <img class="image-cuadrado" src="https://www.abcfichas.com/wp-content/uploads/2020/12/Formula-Area-Cuadrado.jpg" />
+                <input type="number" class="input-cuadrado" placeholder="Ingrese el valor de uno de los lados"/>
+                <button class="button-cuadrado" type="button">Calcular</button>
+            </div>
+            <div class="div-calcular">
+                <div class="div-calcular-perimetro div-calcular-perimetro-square">Perímetro</div>
+                <div class="div-calcular-area div-calcular-area-square">Área</div>
+            </div>
+            </div>
 
+            <div class="card-triangulo">
+                <div class="triangulo">
+                    <h2 class="card-h2">Cálculos del triángulo</h2>
+                    <img class="image-triangulo" src="https://www.neurochispas.com/wp-content/uploads/2021/03/formula-de-triangulo-escaleno.png" />
+                    <div class="triangulo-medidas">
+                        <input type="number" class="input-triangulo input-base" placeholder="Ingrese el valor de uno de la base"/>
+                        <input type="number" class="input-triangulo input-lado1" placeholder="Ingrese el valor de uno del primer lado"/>
+                        <input type="number" class="input-triangulo input-lado2" placeholder="Ingrese el valor de uno del segundo lado"/>
+                    </div>
+                    <button class="button-triangulo" type="button">Calcular</button>
+                </div>
+                <div class="div-calcular">
+                    <div class="div-calcular-perimetro div-calcular-perimetro-triangle">Perímetro</div>
+                    <div class="div-calcular-area div-calcular-area-triangle">Área</div>
+                </div>
+            </div> 
+
+            <div class="card-circulo">
+                <div class="circulo">
+                    <h2 class="card-h2">Cálculos del circulo</h2>
+                    <img class="image-circulo" src="https://i.pinimg.com/736x/c2/70/2a/c2702a4db28d03483bab647690aa7ef4.jpg" />
+                    <input type="number" class="input-circulo input-base" placeholder="Ingrese el valor del radio"/>
+                    <button class="button-circulo" type="button">Calcular</button>
+                </div>
+                    <div class="div-calcular">
+                    <div class="div-calcular-perimetro div-calcular-perimetro-circle">Perímetro</div>
+                    <div class="div-calcular-area div-calcular-area-circle">Área</div>
+                </div>
+            </div> 
         </section>
     </main>
     <footer>Coded by <a href="https://github.com/Diegofergamboa"> Diegofergamboa</a></footer>
