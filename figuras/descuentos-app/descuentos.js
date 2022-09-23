@@ -14,5 +14,5 @@ const $priceValue = document.querySelector('#precio').value;
 // Algorithm for filter.
 
 const resultFilter = cuponDiscounts.map(discount => {
-
+    cuponDiscounts.filter
 })
