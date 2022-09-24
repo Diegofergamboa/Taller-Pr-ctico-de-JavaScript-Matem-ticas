@@ -1,6 +1,6 @@
 // Variables setup.
 
-const cuponDiscounts = [
+const couponDiscounts = [
     {code : 'D01' , valueDiscount : 10 } ,
     {code : 'D02' , valueDiscount : 20 } ,
     {code : 'D03' , valueDiscount : 30 } ,
@@ -8,27 +8,19 @@ const cuponDiscounts = [
     {code : 'D05' , valueDiscount : 50 } ,
 ];
 
-const $code = document.querySelector('#cupon');
-const $price = document.querySelector('#precio');
+// Algorithm to set a new object with the correct answer.
 
-const codeValue = $code.value;
-const priceValue = $price.value;
+const checkDiscount = () => {
+    // Variables to run the algorithm.
+    const $userCoupon = document.getElementById('coupon');
+    const userCouponValue = $userCoupon.value;
 
-// Algorithm for filter.
-let resultDiscount = 0;
-const resultFilter = () => cuponDiscounts.filter(cupon => {
-    if (cupon.code === codeValue) {
-        console.log('sirvio');
-    }
-});
+    // Map function 
+    const checkCoupon = couponDiscounts.filter(couponList => couponList === userCouponValue);
 
+    // Final return of the function 
+    return checkCoupon;
+};
 
-const $buttonCalculationdocument = document.getElementById('calculation');
-$buttonCalculationdocument.addEventListener('click', resultFilter)
-
-
-// // Intentar sacarlo con un método filter.
-// Luego con un método find.
-// Luego con un método find y filter con una función como condicional .
-// Hacer el .map que tenga como parámetro una función .filter.
-
+const $calculation = document.getElementById('calculation');
+$calculation.addEventListener('click', checkDiscount);
