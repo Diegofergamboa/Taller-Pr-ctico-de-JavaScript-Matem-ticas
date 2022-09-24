@@ -8,19 +8,17 @@ const couponDiscounts = [
     {code : 'D05' , valueDiscount : 50 } ,
 ];
 
-// Algorithm to set a new object with the correct answer.
+// Algorithm to set a new object with the correct coupon.
 
-const checkDiscount = () => {
-    // Variables to run the algorithm.
-    const $userCoupon = document.getElementById('coupon');
-    const userCouponValue = $userCoupon.value;
+const $userCoupon = document.getElementById('coupon');
 
-    // Map function 
-    const checkCoupon = couponDiscounts.filter(couponList => couponList === userCouponValue);
-
-    // Final return of the function 
-    return checkCoupon;
-};
+const checkDiscount = () => (couponDiscounts.find(couponList => couponList === $userCoupon.value));
 
 const $calculation = document.getElementById('calculation');
-$calculation.addEventListener('click', checkDiscount);
+
+const printDiscount = () => {
+    checkDiscount()
+    console.log(checkDiscount());
+}
+
+$calculation.addEventListener('click', printDiscount); 
