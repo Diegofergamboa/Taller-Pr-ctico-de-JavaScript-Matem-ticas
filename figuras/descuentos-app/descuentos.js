@@ -28,12 +28,17 @@ const calculationDiscount = () => {
         if (codeCoupon) { // ¿Should i return a true or false in this validation?
             codeCoupon === cuponValue ;
         } else {
-            $printDiscount[0].innerHTML = ` El cupón no aplica, el precio sigue siendo ${userPriceValue}`
+            $printDiscount[0].innerHTML = `
+                El cupón no aplica, el precio sigue siendo ${userPriceValue}
+            `
         }
     };
 
     // Find function.
-    const checkDiscount = () => (couponDiscounts.find(couponList => couponList === cuponValue));
+    const findDiscount = () {
+        return couponDiscounts.find(checkCodeCoupon(cuponValue));
+    };
+
     // Calculation function.
 }   
 
