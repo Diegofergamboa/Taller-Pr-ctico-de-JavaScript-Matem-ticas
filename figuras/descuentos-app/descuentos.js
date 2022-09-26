@@ -10,15 +10,16 @@ const couponDiscounts = [
 
 // Algorithm to set a new object with the correct coupon.
 
-const $userCoupon = document.getElementById('coupon');
 
-const checkDiscount = () => (couponDiscounts.find(couponList => couponList === $userCoupon.value));
 
-const $calculation = document.getElementById('calculation');
 
 const printDiscount = () => {
-    checkDiscount()
-    console.log(checkDiscount());
+    const $userCoupon = document.getElementById('coupon');
+    const cuponValue = $userCoupon.value;
+    const checkDiscount = () => (couponDiscounts.find(couponList => couponList === cuponValue));
 }
 
+
+
+const $calculation = document.getElementById('calculation');
 $calculation.addEventListener('click', printDiscount); 
