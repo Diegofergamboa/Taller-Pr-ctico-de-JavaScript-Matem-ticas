@@ -1,4 +1,4 @@
-// Variables setup.
+// Array with cupons.
 
 const couponDiscounts = [
     {code : 'D01' , valueDiscount : 10 } ,
@@ -7,11 +7,6 @@ const couponDiscounts = [
     {code : 'D04' , valueDiscount : 40 } ,
     {code : 'D05' , valueDiscount : 50 } ,
 ];
-
-// Algorithm to set a new object with the correct coupon.
-
-
-
 
 function calculationDiscount ()  {
     // Principal variable setting.
@@ -23,28 +18,29 @@ function calculationDiscount ()  {
     
     const $printDiscount = document.getElementsByClassName('print-discount');
 
-    function compare() {}
-    if (couponDiscounts.includes(coupon => coupon.code === couponValue)) {
+    const findDiscount = couponDiscounts.find(coupon => coupon.code === couponValue);
+    
+    // Set of the discount founded or not.
+    if (findDiscount) {
         positiveAnswer()
-    } else
-        console.log(couponDiscounts.includes(couponValue))
+    } else {
         $printDiscount[0].innerHTML = `
             El código ${couponValue} no es válido.
         `
-    // Algorithm for sucess coupon.
+    }
     
+    // Algorithm for sucess coupon.
     function positiveAnswer() {
         let discount ;
-
-        const findDiscount = couponDiscounts.find(coupon => coupon.code === couponValue);
         
         if (findDiscount.valueDiscount > 0) {
             discount = findDiscount.valueDiscount; 
             const newPrice = userPriceValue * (100 - discount) / 100;
+            // Final output for sucess answer
             return $printDiscount[0].innerHTML = `
             Tu descuento es de ${discount}% </br>
             Lo que equivale a: </br>
-            ¡El nuevo precio con descuento es ${newPrice}!
+            ¡El nuevo precio con descuento es $${newPrice}!
             `
         }
     }    
@@ -52,7 +48,6 @@ function calculationDiscount ()  {
 
 };
 
-
-
+// Answer of the call to action of the button.
 const $calculation = document.getElementById('calculation');
 $calculation.addEventListener('click', calculationDiscount); 
