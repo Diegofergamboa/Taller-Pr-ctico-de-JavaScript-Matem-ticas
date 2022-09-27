@@ -13,7 +13,7 @@ const couponDiscounts = [
 
 
 
-const calculationDiscount = () => {
+function calculationDiscount ()  {
     // Principal variables setting.
     const $userCoupon = document.getElementById('coupon');
     const cuponValue = $userCoupon.value;
@@ -23,23 +23,26 @@ const calculationDiscount = () => {
     
     const $printDiscount = document.getElementsByClassName('print-discount');
 
-    // Checker of the code coupon.
-    const checkCodeCoupon = (codeCoupon) => {
-        if (codeCoupon) { // ¿Should i return a true or false in this validation?
-            codeCoupon === cuponValue ;
-        } else {
-            $printDiscount[0].innerHTML = `
-                El cupón no aplica, el precio sigue siendo ${userPriceValue}
-            `
-        }
-    };
-
+    let discount ;
     // Find function.
-    const findDiscount = () {
-        return couponDiscounts.find(checkCodeCoupon(cuponValue));
+    function validationCoupon (coupon) {
+        if (coupon.code === coupon) {
+            return true
+        } else {
+            $printDiscount[0].innerHTML = `El código de descuento no es válido`
+        }
+    }
+    const findDiscount = () => {
+        couponDiscounts.find(validationCoupon(cuponValue));
     };
 
+    if (findDiscount) {
+        discount = findDiscount.valueDiscount
+    }
+    
     // Calculation function.
+    const newPrice = userPriceValue * (100 - discount) / 100
+    $printDiscount[0].innerHTML = `El nuevo precio con descuento es ${newPrice}`
 }   
 
 
