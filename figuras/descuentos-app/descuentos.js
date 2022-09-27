@@ -23,22 +23,32 @@ function calculationDiscount ()  {
     
     const $printDiscount = document.getElementsByClassName('print-discount');
 
-    let discount ;
-
-    const findDiscount = couponDiscounts.find(coupon => coupon.code === couponValue);
-    
-    if (findDiscount.valueDiscount > 0) {
-        discount = findDiscount.valueDiscount; 
-        const newPrice = userPriceValue * (100 - discount) / 100;
-        return $printDiscount[0].innerHTML = `
-        Tu descuento es de ${discount}% </br>
-        Lo que equivale a: </br>
-        ¡El nuevo precio con descuento es ${newPrice}!
+    function compare() {}
+    if (couponDiscounts.includes(coupon => coupon.code === couponValue)) {
+        positiveAnswer()
+    } else
+        console.log(couponDiscounts.includes(couponValue))
+        $printDiscount[0].innerHTML = `
+            El código ${couponValue} no es válido.
         `
-    }
-    if (findDiscount === undefined) {
-        $printDiscount[0].innerHTML = `${couponValue} como código de cupón es no válido.` 
-    }
+    // Algorithm for sucess coupon.
+    
+    function positiveAnswer() {
+        let discount ;
+
+        const findDiscount = couponDiscounts.find(coupon => coupon.code === couponValue);
+        
+        if (findDiscount.valueDiscount > 0) {
+            discount = findDiscount.valueDiscount; 
+            const newPrice = userPriceValue * (100 - discount) / 100;
+            return $printDiscount[0].innerHTML = `
+            Tu descuento es de ${discount}% </br>
+            Lo que equivale a: </br>
+            ¡El nuevo precio con descuento es ${newPrice}!
+            `
+        }
+    }    
+    
 
 };
 
