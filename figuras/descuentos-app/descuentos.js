@@ -14,9 +14,9 @@ const couponDiscounts = [
 
 
 function calculationDiscount ()  {
-    // Principal variables setting.
+    // Principal variable setting.
     const $userCoupon = document.getElementById('coupon');
-    const cuponValue = $userCoupon.value;
+    const couponValue = $userCoupon.value;
     
     const $priceUser = document.getElementById('price');
     const userPriceValue = $priceUser.value;
@@ -26,24 +26,28 @@ function calculationDiscount ()  {
     let discount ;
     // Find function.
     function validationCoupon (coupon) {
-        if (coupon.code === coupon) {
-            return true
+        if (coupon.code === couponValue) {
+            return true;
         } else {
-            $printDiscount[0].innerHTML = `El código de descuento no es válido`
+            return false;
         }
-    }
-    const findDiscount = () => {
-        couponDiscounts.find(validationCoupon(cuponValue));
     };
 
-    if (findDiscount) {
-        discount = findDiscount.valueDiscount
+    const findDiscount = () => {
+        couponDiscounts.find(coupon => validationCoupon(coupon));
+    };
+
+    if (validationCoupon) { discount = findDiscount.valueDiscount }
+
+    // Calculation function.
+    if (validationCoupon) {
+        const newPrice = userPriceValue * (100 - discount) / 100
+        $printDiscount[0].innerHTML = `El nuevo precio con descuento es ${newPrice}`
+    } else {
+        $printDiscount[0].innerHTML = `El código de descuento no es válido`
     }
     
-    // Calculation function.
-    const newPrice = userPriceValue * (100 - discount) / 100
-    $printDiscount[0].innerHTML = `El nuevo precio con descuento es ${newPrice}`
-}   
+};
 
 
 
