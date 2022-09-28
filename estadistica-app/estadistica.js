@@ -1,5 +1,12 @@
-arrayNumber = [0,1,2,3,4,5,6,7,8,9];
+const arrayTest = [0,1,2,3,3,4,5,6,7,56,56,54];
 
-const initialValue = 0;
-const sumWithIinitial = arrayNumber.reduce((previousValue, currentValue) => previousValue + currentValue, initialValue);
-console.log(sumWithIinitial);
+// Esta función se va a enviar como parámetro.
+
+function reduceEngine(initialValue, SumValue){
+    // The initial value is a value that is the position that is sent to the method
+    // Sum is the result of the process.
+    return initialValue + SumValue ;
+}
+
+// Here we put the function of how the engine works in the reduce method 
+const reduceMethodWithArrays = arrayTest.reduce(reduceEngine);
