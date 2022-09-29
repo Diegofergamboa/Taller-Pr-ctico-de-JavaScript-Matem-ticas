@@ -1,7 +1,6 @@
 // ! Explanation of the reduce method.
 
 const arrayTest = [1,2,3,4,5,6,7];
-console.log(arrayTest.length);
 // Esta función se va a enviar como parámetro.
 
 function reduceEngine(initialValue, SumValue){
@@ -21,6 +20,10 @@ const reduceMethodWithArrays = arrayTest.reduce(reduceEngine);
 // Second challenge to know if a number is odd or even.
 const checkEven = (number) => (number % 2 != 0) ? false : true;
 
+function sortEngine(a, b) {
+    return a - b ;
+};
+
 function calculatePosition(array) {
     let positionA;
     let positionB;
@@ -35,5 +38,8 @@ function calculatePosition(array) {
     console.log(positionA);
     console.log(positionB);
 };
+
+const arraySorted = (array) => (array.sort(sortEngine));
+
 
 
