@@ -1,6 +1,6 @@
 // ! Explanation of the reduce method.
 
-const arrayTest = [1,2,3,4,5,6,7];
+const arrayTest = [1,2,3,4,5,6,7,8,9];
 // Esta función se va a enviar como parámetro.
 
 function reduceEngine(initialValue, SumValue){
@@ -20,26 +20,45 @@ const reduceMethodWithArrays = arrayTest.reduce(reduceEngine);
 // Second challenge to know if a number is odd or even.
 const checkEven = (number) => (number % 2 != 0) ? false : true;
 
+// Engine to the sort function works!
+// * Basically works using the a, as the initial position and b, as the second position. If b is higher ll be reposition the a as b and reverse. 
 function sortEngine(a, b) {
     return a - b ;
 };
 
+// If the array is on its length odd, ll be return the position as the middle character of the array and, if its even ll return two positions the middle and the middle plus one.
+
+let positionA;
+let positionB;
 function calculatePosition(array) {
-    let positionA;
-    let positionB;
-    
     if (!checkEven(array.length)) {
         positionA = Math.floor(array.length / 2);
     } else {
         positionA = Math.floor(array.length / 2);
-        positionB = Math.floor(array.length / 2) + 1;
+        positionB = Math.floor(array.length / 2) - 1;
     }
-
-    console.log(positionA);
-    console.log(positionB);
 };
 
+// Result of the array sorted
 const arraySorted = (array) => (array.sort(sortEngine));
+const sortedArray = arraySorted(arrayTest);
 
+// Median algorithm.
+
+let medianValue;
+function calculateMedian(array) {
+    calculatePosition(array);
+    indexOne = positionA;
+    indexTwo = positionB;
+    if (checkEven) {
+        medianValue = (array[indexOne] + array[indexTwo]) / 2
+    } else {
+        // ! Check why this result is not a number.
+        medianValue = array[indexOne];
+    } 
+    console.log(medianValue)
+}
+
+calculateMedian(sortedArray);
 
 
