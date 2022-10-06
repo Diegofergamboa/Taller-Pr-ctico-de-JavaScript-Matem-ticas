@@ -33,6 +33,7 @@ let positionB;
 function calculatePosition(array) {
     if (!checkEven(array.length)) {
         positionA = Math.floor(array.length / 2);
+        return positionA
     } else {
         positionA = Math.floor(array.length / 2);
         positionB = Math.floor(array.length / 2) - 1;
@@ -50,15 +51,9 @@ function calculateMedian(array) {
     calculatePosition(array);
     indexOne = positionA;
     indexTwo = positionB;
-    if (checkEven) {
-        medianValue = (array[indexOne] + array[indexTwo]) / 2
-    } else {
-        // ! Check why this result is not a number.
-        medianValue = array[indexOne];
-    } 
-    console.log(medianValue)
+    (!indexTwo) ? medianValue = array[indexOne] : medianValue = (array[indexOne] + array[indexTwo]) / 2 ;
+    console.log(medianValue);
 }
 
 calculateMedian(sortedArray);
-
 
