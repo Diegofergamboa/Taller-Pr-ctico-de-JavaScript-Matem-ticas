@@ -1,6 +1,6 @@
 // ! Explanation of the reduce method.
 
-const arrayTest = [1,2,3,4,5,6,7,8,9];
+const arrayTest = [1,2,3,4,5,6,7,8,9,9];
 // Esta función se va a enviar como parámetro.
 
 function reduceEngine(initialValue, SumValue){
@@ -52,8 +52,22 @@ function calculateMedian(array) {
     indexOne = positionA;
     indexTwo = positionB;
     (!indexTwo) ? medianValue = array[indexOne] : medianValue = (array[indexOne] + array[indexTwo]) / 2 ;
-    console.log(medianValue);
+    return medianValue;
 }
 
 calculateMedian(sortedArray);
 
+//! End of calculation of the median.
+
+//! Calculation of the mode with JS vanilla
+
+function calculateModa(array) {
+    let repeatedElements = {};
+    array.forEach(element => {
+        
+    });
+    console.log(repeatedElements);
+}
+
+calculateModa(arrayTest);
+// arrayTest
