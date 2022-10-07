@@ -61,13 +61,20 @@ calculateMedian(sortedArray);
 
 //! Calculation of the mode with JS vanilla
 
+
+const arrayTest2 = [1,2,3,4,5,6,7,8,9,9];
 function calculateModa(array) {
+
     let repeatedElements = {};
+
     array.forEach(element => {
-        
+        const index = array[element];
+
+        (repeatedElements[index]) ? repeatedElements[index] += repeatedElements[index] : null;
+
+        repeatedElements[index] = 1;
     });
     console.log(repeatedElements);
 }
 
-calculateModa(arrayTest);
-// arrayTest
+calculateModa(arrayTest2);
