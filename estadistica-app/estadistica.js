@@ -20,8 +20,8 @@ const reduceMethodWithArrays = arrayTest.reduce(reduceEngine);
 // Second challenge to know if a number is odd or even.
 const checkEven = (number) => (number % 2 != 0) ? false : true;
 
-// Engine to the sort function works!
-// * Basically works using the a, as the initial position and b, as the second position. If b is higher ll be reposition the a as b and reverse. 
+// * Engine to the sort function works!
+// * Basically works using the a, as the initial position and b, as the second position. If b is higher ll be repositioned the a as b and reverse. 
 function sortEngine(a, b) {
     return a - b ;
 };
@@ -103,10 +103,11 @@ function calculateMode(array) {
     const sortedArray = arrayTransformed.sort(sortEngineTwoElements);
     
     // Return of the mode.
-    const mode = sortedArray[sortedArray.length - 1];
-    console.log(`El valor de la moda es, ${mode[0]}`);
+    const modeArray = sortedArray[sortedArray.length - 1];
+    console.log(`El valor de la moda es, ${modeArray[0]}`);
 } 
 
 calculateMode(arrayTest3);
 
 //! End of the calculation of the mode with sort and object manipulation
+
