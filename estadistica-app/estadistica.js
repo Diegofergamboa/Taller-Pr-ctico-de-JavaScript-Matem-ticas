@@ -79,4 +79,34 @@ function calculateModa(array) {
     console.log(repeatedElements);
 }
 
-calculateModa(arrayTest2);
+
+//! End of the Calculation with JS vanilla
+
+//! Calculation of the mode with sort and object manipulation
+
+const arrayTest3 = [1,2,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,6,7,8,9,9,9,9,9,9,9,9,9,9,'abc'];
+
+function calculateMode(array) {
+    // Calculation of the repeated elements.
+    let newObject = {}
+    array.forEach(element => {
+        (newObject[element]) ? newObject[element] += 1 : newObject[element] = 1 ;  
+    });
+
+    // Conversion to array.
+    const arrayTransformed = Object.entries(newObject);
+
+    // Calculation sort by length.
+    function sortEngineTwoElements(a, b) {
+        return a[1] - b[1] ;
+    };
+    const sortedArray = arrayTransformed.sort(sortEngineTwoElements);
+    
+    // Return of the mode.
+    const mode = sortedArray[sortedArray.length - 1];
+    console.log(`El valor de la moda es, ${mode[0]}`);
+} 
+
+calculateMode(arrayTest3);
+
+//! End of the calculation of the mode with sort and object manipulation
