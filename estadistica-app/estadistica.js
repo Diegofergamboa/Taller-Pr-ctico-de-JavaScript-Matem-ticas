@@ -110,23 +110,24 @@ function calculateMode(array) {
 
 //! End of the calculation of the mode with sort and object manipulation
 
-//! Calculation of the harmonic mode.
+//! Calculation of the harmonic average.
 
 const arrayTest4 = [1,2,3,5,8,13,21,34,55];
 
-function harmonicMode(array) {
+function harmonicAverage(array) {
     // * Reduce method to obtain a final sum.
-    function reduceEngineHarmonicMode(a, b) {
+    function reduceEngineHarmonicAverage(a, b) {
         return (a) + (1/b);
     };
-    const reducedArray = array.reduce(reduceEngineHarmonicMode);
+    const reducedArray = array.reduce(reduceEngineHarmonicAverage);
     console.log('reduced Array is: ' + reducedArray)
     // * Calculation of the length for the N value.
     const NValue = array.length - 1 ;
     // * Final phormula.
-    const productHarmonicMode = NValue / reducedArray ;
-    console.log(`El valor de la media armónica es de: ${productHarmonicMode}`);
+    const productHarmonicAverage = NValue / reducedArray ;
+    console.log(`El valor de la media armónica es de: ${productHarmonicAverage}`);
 }
 
-harmonicMode(arrayTest4);
+harmonicAverage(arrayTest4);
 
+//! End of Calculation of the harmonic average.
